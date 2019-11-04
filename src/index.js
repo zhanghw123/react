@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import {Provider} from 'react-redux';
+import store from './store';
 import {
   BrowserRouter,
   Route,
@@ -22,9 +24,11 @@ export default class App extends Component {
     render() {
         return (
             <div>
-              <BrowserRouter>
-                     {renderRoutes(routes)}
+              <Provider store={store}>
+                <BrowserRouter>
+                  {renderRoutes(routes)}
                 </BrowserRouter>
+              </Provider>
             </div>
         )
     }

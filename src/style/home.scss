@@ -1,0 +1,12 @@
+ul {
+    li {
+        width: 200px;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        &:hover{
+            border-bottom: 1px solid blue;
+            font-weight: bold;
+        }
+    }
+}
